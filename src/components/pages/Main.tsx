@@ -38,9 +38,10 @@ export default function Main() {
 
     return (
         <main className="container mx-auto">
-            <div className="flex flex-col justify-center">
-                <Header />
-                <div className="px-4 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Header />
+            <section className="mt-16">
+                <h2 className="text-primary text-xl px-8" id="services">Serviços</h2>
+                <div className="px-4 mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service => (
                         <ServiceCard
                             key={service.service}
@@ -51,7 +52,7 @@ export default function Main() {
                         />
                     )))}
                 </div>
-            </div>
+            </section>
         </main>
     );
 };
