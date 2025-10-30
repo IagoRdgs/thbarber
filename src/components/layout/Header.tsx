@@ -1,5 +1,5 @@
 import logo from "../../assets/thbarber.svg";
-import scissors from "../../assets/scissors.png";
+import scissors from "../../assets/scissors.svg";
 import Button from "./Button";
 
 export default function Header() {
