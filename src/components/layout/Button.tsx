@@ -13,7 +13,7 @@ export default function Button({
     variant = "primary",
     onClick
 }: buttonProps) {
-    const baseStyle = "py-1 px-4 text-dark rounded-md cursor-pointer hover:bg-transparent hover:outline hover:text-yellow-full active:outline active:bg-transparent active:text-yellow-full transition-all duration-300";
+    const baseStyle = "py-1 px-4 text-dark-p rounded-md cursor-pointer hover:bg-transparent hover:outline hover:text-yellow-full active:outline active:bg-transparent active:text-yellow-full transition-all duration-300";
     const variantClass = {
         primary: "bg-yellow-full",
         secondary: "bg-transparent border border-yellow-mid",

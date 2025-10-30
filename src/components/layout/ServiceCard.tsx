@@ -27,7 +27,7 @@ export default function ServiceCard({
             </div>
 
 
-            <div className="text-tertiary text-sm space-y-2">
+            <div className="text-tertiary-p text-sm space-y-2">
                 <p>{description}</p>
                 <div className="flex items-center space-x-2">
                     <Clock size={16} />
