@@ -1,3 +1,4 @@
+import Gallery from "../layout/Gallery";
 import Header from "../layout/Header";
 import ServiceCard from "../layout/ServiceCard";
 
@@ -39,8 +40,8 @@ export default function Main() {
     return (
         <main className="container mx-auto">
             <Header />
-            <section className="mt-16">
-                <h2 className="text-primary text-xl px-8" id="services">Serviços</h2>
+            <section className="my-16">
+                <h2 className="text-primary-p text-xl px-8" id="services">Serviços</h2>
                 <div className="px-4 mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service => (
                         <ServiceCard
@@ -52,6 +53,11 @@ export default function Main() {
                         />
                     )))}
                 </div>
+            </section>
+
+            <section className="my-16">
+                <h2 className="text-primary-p text-xl px-8 mb-8" id="services">Galeria</h2>
+                <Gallery />
             </section>
         </main>
     );
