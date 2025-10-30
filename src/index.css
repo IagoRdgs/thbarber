@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-hahmlet: "Hahmlet", sans-serif;
+
+  --color-primary-bg: #1E1E1E;
+  --color-secondary-bg: #252525;
+  --color-primary: #FFF;
+  --color-secondary: #D9D9D9;
+  --color-tertiary: #8C8C8C;
+  --color-dark: #252525;
+  --color-yellow-mid: rgba(254, 188, 47, .5);
+  --color-yellow-full: #FEBC2F;
+}
+
+body {
+  font-family: var(--font-hahmlet);
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary);
+}
