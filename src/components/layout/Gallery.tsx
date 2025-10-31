@@ -80,7 +80,7 @@ export default function Gallery() {
                 <CarouselContent>
                     {galleryItems.map((item, index) => (
                         <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                            <div className="border border-yellow-mid rounded-xl flex flex-col p-4 space-y-4">
+                            <div className="bg-secondary-bg border border-yellow-mid rounded-xl flex flex-col p-4 space-y-4">
                                 <img src={item.image} alt={item.caption} />
                                 <span className="text-sm">{item.caption}</span>
                             </div>
@@ -88,8 +88,8 @@ export default function Gallery() {
                     ))}
                 </CarouselContent>
 
-                <CarouselPrevious className='absolute bg-dark-p text-secondary-p left-[-50px] top-1/2 -translate-y-1/2 hidden lg:flex' />
-                <CarouselNext className='absolute bg-dark-p text-secondary-p right-[-50px] top-1/2 -translate-y-1/2 hidden lg:flex' />
+                <CarouselPrevious className='absolute bg-secondary-bg text-secondary-p left-[-50px] top-1/2 -translate-y-1/2 hidden lg:flex hover:bg-secondary-bg/30 hover:text-yellow-mid hover:border-yellow-mid cursor-pointer' />
+                <CarouselNext className='absolute bg-secondary-bg text-secondary-p right-[-50px] top-1/2 -translate-y-1/2 hidden lg:flex hover:bg-secondary-bg/30 hover:text-yellow-mid hover:border-yellow-mid cursor-pointer' />
             </Carousel>
 
             {api && (

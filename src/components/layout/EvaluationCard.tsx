@@ -50,7 +50,7 @@ export default function EvaluationCard({
     };
 
     return (
-        <div className="flex border border-yellow-mid rounded-lg p-4 space-x-4 items-start
+        <div className="bg-secondary-bg flex border border-yellow-mid rounded-lg p-4 space-x-4 items-start
             hover:scale-103 hover:shadow-lg hover:shadow-yellow-mid/30
             active:scale-103 active:shadow-lg active:shadow-yellow-mid/30
             focus:scale-105 focus:shadow-lg focus:shadow-yellow-mid/30 outline-none
