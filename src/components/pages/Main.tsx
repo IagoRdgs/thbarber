@@ -1,6 +1,10 @@
+import type { evaluationProps } from "../layout/EvaluationCard";
 import Gallery from "../layout/Gallery";
 import Header from "../layout/Header";
 import ServiceCard from "../layout/ServiceCard";
+
+import user from "../../assets/client1.png";
+import EvaluationCard from "../layout/EvaluationCard";
 
 type serviceInfo = {
     service: string;
@@ -37,6 +41,30 @@ export default function Main() {
         }
     ];
 
+    const evaluations: evaluationProps[] = [
+        {
+            photo: user,
+            name: "Cliente 1",
+            evaluation: "Muito bom, com certeza vou voltar.",
+            stars: 5,
+            date: new Date()
+        },
+        {
+            photo: user,
+            name: "Cliente 2",
+            evaluation: "Corta muito bem, tem futuro, mas tirou demais em cima. Lorem impsum dolor et mani nao dosna foja sjaks dia dafnois ksjand ndks",
+            stars: 4,
+            date: "2025-10-30T19:30:00"
+        },
+        {
+            photo: user,
+            name: "Cliente 3",
+            evaluation: "Ótimo atendimento, mas demorou um pouco.",
+            stars: 4.5,
+            date: "2025-10-30T15:30:00"
+        }
+    ];
+
     return (
         <main className="container mx-auto">
             <Header />
@@ -58,6 +86,22 @@ export default function Main() {
             <section className="my-16">
                 <h2 className="text-primary-p text-xl px-8 mb-8" id="services">Galeria</h2>
                 <Gallery />
+            </section>
+
+            <section className="my-16">
+                <h2 className="text-primary-p text-xl px-8 mb-8" id="services">Avaliações</h2>
+                <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {evaluations.map((evaluation, index) => (
+                        <EvaluationCard
+                            key={index}
+                            photo={evaluation.photo}
+                            name={evaluation.name}
+                            evaluation={evaluation.evaluation}
+                            stars={evaluation.stars}
+                            date={evaluation.date}
+                        />
+                    ))}
+                </div>
             </section>
         </main>
     );
