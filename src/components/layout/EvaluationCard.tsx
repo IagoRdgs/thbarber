@@ -56,7 +56,7 @@ export default function EvaluationCard({
             focus:scale-105 focus:shadow-lg focus:shadow-yellow-mid/30 outline-none
             transition-all duration-300"
         >
-            <div className="w-12 h-12 overflow-hidden shrink-0 rounded-full border-1 border-yellow-mid">
+            <div className="w-12 h-12 overflow-hidden shrink-0 rounded-full border border-yellow-mid">
                 <img className="w-full h-full object-cover" src={photo} alt="photo" />
             </div>
 
