@@ -5,6 +5,7 @@ import ServiceCard from "../layout/ServiceCard";
 
 import user from "../../assets/client1.png";
 import EvaluationCard from "../layout/EvaluationCard";
+import Footer from "../layout/Footer";
 
 type serviceInfo = {
     service: string;
@@ -103,6 +104,8 @@ export default function Main() {
                     ))}
                 </div>
             </section>
+
+            <Footer />
         </main>
     );
 };
