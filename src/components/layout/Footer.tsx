@@ -8,4 +8,4 @@ export default function Footer() {
         </div>
         <p className="text-tertiary-p text-xs">&copy; Iago Rodrigues 2025. All Rights Reserved.</p>
     </footer>
-}
+};
