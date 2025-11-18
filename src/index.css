@@ -21,6 +21,8 @@ body {
   font-family: var(--font-hahmlet);
   background-color: var(--color-primary-bg);
   color: var(--color-primary-p);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-yellow-full) transparent;
 }
 
 @theme inline {
