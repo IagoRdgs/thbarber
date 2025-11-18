@@ -90,9 +90,9 @@ export default function Scheduling() {
                                         date,
                                         time: null
                                     }))}
-                                    className={`flex flex-col px-4 py-2 rounded-xl border transition-all duration-300 ${isSelected
+                                    className={`flex flex-col px-4 py-2 rounded-xl border cursor-pointer transition-all duration-300 ${isSelected
                                         ? "bg-yellow-mid text-white border-yellow-mid"
-                                        : "border-tertiary-p hover:border-yellow-mid"
+                                        : "border-tertiary-p hover:border-yellow-mid active:border-yellow-mid"
                                         }`}
                                 >
                                     <span>{date.format("DD/MM")}</span>
@@ -117,11 +117,11 @@ export default function Scheduling() {
                                                 ...prev,
                                                 time
                                             }))}
-                                            className={`px-3 py-2 rounded-md border text-sm transition-all duration-300 ${isSelected
+                                            className={`px-3 py-2 rounded-md border text-sm cursor-pointer transition-all duration-300 ${isSelected
                                                 ? "bg-yellow-mid text-white border-yellow-mid"
                                                 : isDisabled
                                                     ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                                                    : "border-tertiary-p hover:border-yellow-mid"
+                                                    : "border-tertiary-p hover:border-yellow-mid active:border-yellow-mid"
                                                 }`}
                                         >
                                             {time}
@@ -136,23 +136,28 @@ export default function Scheduling() {
                         <div className="my-16">
                             <h2 className="leading-none">Confirmar agendamento</h2>
 
-                            <div className="my-4 border border-yellow-mid rounded-md p-4">
-                                <p>
-                                    Serviço: {" "}
-                                    <span className="text-yellow-full">
-                                        {scheduleData.service.service}
-                                    </span>
-                                </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div className="my-8 border border-yellow-mid rounded-md p-4 flex flex-col">
+                                    <p>
+                                        Serviço: {" "}
+                                        <span className="text-yellow-full">
+                                            {scheduleData.service.service}
+                                        </span>
+                                    </p>
 
-                                <p>
-                                    Dia e horário: {" "}
-                                    <span className="text-yellow-full">
-                                        {scheduleData.date.format("DD/MM/YYYY")} - {scheduleData.time}
-                                    </span>
-                                </p>
+                                    <p>
+                                        Dia e horário: {" "}
+                                        <span className="text-yellow-full">
+                                            {scheduleData.date.format("DD/MM/YYYY")} - {scheduleData.time}
+                                        </span>
+                                    </p>
 
-                                <button className="bg-yellow-full text-primary-bg px-4 py-2 rounded-lg mt-4
-                                hover:bg">Agendar</button>
+                                    <button className="bg-yellow-full text-primary-bg px-4 py-2 rounded-lg mt-8
+                                hover:bg-transparent hover:text-yellow-full hover:outline
+                                active:bg-transparent active:text-yellow-full active:outline
+                                cursor-pointer transition-all duration-300
+                                w-full">Agendar</button>
+                                </div>
                             </div>
                         </div>
                     )}
